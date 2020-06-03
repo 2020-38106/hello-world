@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Olá Mundo!</title>
+        <link rel="stylesheet" type="text/css" href="../_css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="../_css/multimidia.css"/>
+    </head>
+    <script language="javascript" src="../_javascript/funcoes.js"></script>
+    <body>
+        <div id= "interface">
+            <header id= "beginning">
+                <hgroup>
+                    <h1>Olá mundo divino!</h1>
+                    <h2>&nbsp; Crie vida ao seu espaço!</h2> 
+                </hgroup>
+                <img id="icone" src="../_imagens/home.jpg"width="200"/>
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul type="disc">
+                        <li onmouseover="mudafoto('../_imagens/home.jpg')"onmouseout="mudafoto('../_imagens/multim.jpg')"><a href="pagAna.html">Home</a></li>
+                        <li onmouseover="mudafoto('../_imagens/especif.jpg')"onmouseout="mudafoto('../_imagens/multim.jpg')"><a href="especif.html">Especificações</a></li>
+                        <li onmouseover="mudafoto('../_imagens/foto.jpg')" onmouseout="mudafoto('../_imagens/multim.jpg')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudafoto('../_imagens/multim.jpg')" onmouseout= "mudafoto('../_imagens/multim.jpg')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmouseover="mudafoto('../_imagens/contato.jpg')"onmouseout="mudafoto('../_imagens/multim.jpg')"><a href="contat.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+                <img id="logo" src="../_imagens/logo.jpg" width="100"/>
+            </header>
+            <section id="content-full">
+                <article id="notici-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h4>Vídeo</h4>
+                            <h4>Audio</h4>
+                            <p><h5>por Ana Tertuliano</br>Atualizado - 25/05/2020</h5></p>
+                        </hgroup>
+                    </header>
+                    <p>Olhe e ouça com atenção.</p>
+                    <div id="tv-radio">
+                        <audio id="musica" controls="controls">
+                            <source src="../_multimidia/mult.mp4" type="audio/mpeg"/>
+                            Desculpe, mas não foi possível carregar o áudio.
+                        </audio>
+                        <audio id="hino" controls="controls">
+                            <source src="../_multimidia/21 Hino 271.mp3" type="audio/mpeg"/>
+                            <source src="../_multimidia/21 Hino 271 - cópia.m4a" type="audio/x-aac"/>
+                            <source src="../_multimidia/21 Hino 271 - cópia.ogg" type="audio/ogg"/>
+                            Desculpe, mas não foi possível carregar o áudio.
+                        </audio>
+                        <video id="filmes" controls="controls">
+                            <source src="../_multimidia/mult.mp4" type="video/mp4"/>
+                            Desculpe, mas não foi possível carregar o vídeo.
+                        </video>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9Hn2Lhbyw_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </article>
+
+            </section>
+
+
+            <p>xxxxxx</p>
+
+            <footer id="footer">
+                <br/>Copyright&copy; 2020 - by Ana Tertuliano
+                <br/><a href="https://www.cienciacrista.com" target="_blank">Ciência Cristã</a> <a href="https://www.youtube.com/user/cienciacrista1" target="_blank">YouTube</a>
+            </footer>
+        </div>
+    </body>
+</html>
