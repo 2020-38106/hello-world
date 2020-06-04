@@ -3,9 +3,12 @@ body{
     background-color: rgba(219, 226, 192, 0.5);
     color:rgb(62 53 180);
     font-family: Verdana, Tahoma, sans-serif;
+    margin:auto;
+    position: absolute;
 }
 div#interface {
-    width: 900px;
+    width: auto;
+    height: auto;
     background-color: rgba(221, 233, 177, 0.384);
     margin: 5px auto 30px auto;
     box-shadow: 1px 1px 10px;
@@ -119,7 +122,7 @@ nav#menu ul {
     text-transform: uppercase;
     position: absolute;
     top: 0px;
-    left: 340px;
+    left: 300px;
 }
 nav#menu li {
     display: inline-block;
