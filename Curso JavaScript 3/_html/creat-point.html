@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>Criar um ponto de coleta</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet"/>
+        <link href="../_css/stylo.css" rel="stylesheet"/>
+        <link href="../_css/creat-point.css" rel="stylesheet"/>
+        <link href="../_css/responsive.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="page-creat-point">
+            <header>
+                <img src="../_icones/logo.svg" alt="logomarca"/>
+                <a href="#"><span></span><strong>Voltar para home.</strong></a>
+            </header>
+            <form action="">
+                <h1>Cadastro do ponto de coleta</h1>
+                <fieldset> <!-- Ao invés de uma div que só divide - não tem muito siginificado semântico, pois fieldset uni uma caixa a outra-->
+                    <legend>
+                        <h2>Dados da entidade</h2>
+                    </legend>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <h2>Ítens de coleta</h2>
+                    </legend> <!--tem um posicionamento pré estabelecido, mas iremos reformulálo-->
+                    <div class="field">    <!--(.field) Emmet cria uma div com essa class -->
+                            <label for="nome">Nome da entidade</label>
+                            <input type="text" name="nome"/>
+                    </div>
+                    <div class="field-group"> <!-- campo-grupo -->
+                        <div class="field">
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address"/> <!-- label+imput -->
+                        </div>
+                        <div class="field">
+                            <label for="address2">Número/Complemento</label>
+                            <input type="text" name="address2"/>
+                        </div><!--(.field*2) cria duas div -->
+                    </div>
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="state">Estado</label>
+                                <select name="uf">
+                                    <option value="">Selecione o Estado</option>  <!--<option value="1">Opção de Estados</option>-->
+                                </select>
+                                <input type="hidden" name="state"/>
+                        </div>
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <select name="city" disabled> <!--permite acesso somente após a escolha do Estado-->
+                                <option value="">Selecione a Cidade</option>
+                            </select>                            
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="submit" > Cadastrar ponto de coleta</button>
+            </form> <!-- ao clicar no botão (submit) faz o envio do formulário dentro de seu form-->
+        </div>
+        <script src="../_jS/creat-point.js"></script> <!-- <script src="styles/create-point.js"></script> -->
+    </body>
+</html>
