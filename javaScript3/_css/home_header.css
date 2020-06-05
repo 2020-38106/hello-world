@@ -1,0 +1,49 @@
+#page-home{
+    height:100vh; 
+    background: url('../_icones/home-background.svg') no-repeat;
+    background-position: 35vw bottom;
+}
+#page-home .content{
+    width:90%;
+    max-width:1100px; /*max - limite de movimentação*/
+    height:100%;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+}
+#page-home .content header{
+    margin-top: 48px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+#page-home .content header a{
+    display:flex;
+    color:var(--title-color);
+    font-weight: 700; /* peso da font*/
+}
+#page-home .content header a span{
+    margin-right:16px;
+    display:flex;
+    background-image:url("../_icones/log-in.svg");
+    width:20px;
+    height:20px;
+}
+
+
+
+
+
+
+/*Box model
+Modelo de caixa
+
+composta por: largura, altura, espacamento, preenchimento, broda, cor, fundo, posicionamento, alinhamento.
+(.) para definir as class
+width - (limite de largura) define a configuração na movimentação da página, aumentar e diminuir e delimitar, definir onde a caixa ficará com a movimentação. Com (%) a página faz um cálculo proporcional de onde aparecer (dinâmico), e, (px) estabelece um ponto fixo.
+margin - 0px auto - (0) se refere a Top e Bottom e (auto) a left e right;
+margin: top (left/right) bottom; 3 propriedades
+margin: top right bottom left; 4 propriedades
+vh e % são relações dinâmicas e px estabelece um ponto fixo
+vh - altura vw - largura 
+*/

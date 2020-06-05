@@ -1,0 +1,98 @@
+#page-creat-point{
+    width:90%; /*largura normal*/
+    max-width:1100px; /*no máx. até esta largura terá movimeto, apartir será fixo, nào aumentará mais.*/
+    margin: 0 auto; /*top/boton=0 e left/height auto (preenchimento automático)*/
+}
+#page-creat-point header{
+    margin-top:48px;
+    display:flex;
+    justify-content:space-between; /*separa cada um para um lado e um grande espaço no meio.*/
+    align-items:center; /*alinhado ao eixo x baixando o y*/
+}
+#page-creat-point header a {
+    color:var(--title-color);
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+}
+#page-creat-point header a span{
+    margin-right:16px;
+    background-image:url(../_icones/arrow-left.svg);
+    display:flex;
+    width:20px;
+    height:20px;
+}
+form{ 
+    background-color:white;
+    margin:80px auto;
+    padding:64px;/*preenchimento interno dos 4 lados ou do lado que desejar*/
+    border-radius:8px;
+    max-width:730px;
+}
+
+form h1{
+    font-size: 36px;
+}
+form fieldset{
+    margin-top: 64px;
+    border: 0;
+}
+form legend{
+    margin-bottom: 40px;
+}
+form legend h2{
+    font-size:24px;
+}
+form .field{
+    flex:1;
+    display: flex;
+    flex-direction:column;
+    margin-bottom:24px;
+}
+form .field-group{
+    display: flex;
+}
+form input,
+form select{
+    background-color:#f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    outline: none; /*retira a linha preta da borda,/o contorno da caixa/, a referência da caixa aqui será a cor.*/
+    border-radius:8px;
+}
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+form .field-group .field + .field{ /* proprie/s aplicadas no segundo field */
+    margin-left: 24px;
+}
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    transition: 400ms; /*ver opçoes de transition, como acrescentar background-color por exemplo*/
+}
+form button:hover{
+    background-color: #2fb86e;
+}
+
+
+/*(margin(border(padding(content))))
+/*margin - alinhamento da caixa, pelo lado de fora -  dentro será o (dislay:flex;)
+padding com algo que separa o tamanho da largura (max-width por exemplo) ele vai aumentar o tamanho da sua caixa, para que este comportamento não ocorra, utilizamos box-sizing;
+O padrão de preenchimento é (content-box) ou seja o padrão é o conteúdo, depois vem com preenchimento (padding)etc,
+já o box-sizing - define o (border) como padrão, a caixa terá o tamanho máximo de largura dentro do (border) então todo padding que entrar não irá esticar, pois a caixa liga o max-width ao padding, define que o preenchimento interno com o coteúdo ficará sempre dentro dele mesmo, como uma garrafinha dentro de uma grande caixa, cada um tem seu próprio tamanho.
+*/
