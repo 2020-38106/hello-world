@@ -1,0 +1,28 @@
+@charset "UTF-8";
+div#tv-radio{
+    width:1000px;
+    height: 880px;
+    margin: auto;
+    background: url("../_imagens/paisagRadioTv.jpg") no-repeat;
+}
+audio#musica{
+    display: block;
+    position: relative;
+    left:27px;
+    top:683px;
+    width:280px;
+}
+audio#hino{
+    display: block;
+    position:relative;
+    left:27px; /*para afastar da margem a esquerda aumente o valor, e, para aproximar diminua*/
+    top:689px; /*para afastar da margem do topo (baixar) aumente o valor, e, para aproximar (subir) diminua*/
+    width:280px;
+}
+video#filmes{
+    display: block;
+    position: relative;
+    left: 358px;
+    top: 256px;
+    width:240px;
+}
