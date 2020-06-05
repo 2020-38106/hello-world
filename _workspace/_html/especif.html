@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Olá Mundo!</title>
+        <link rel="stylesheet" href="../_css/estilo.css"/>
+        <link rel="stylesheet" href="../_css/specs.css"/>
+    </head>
+    <script language="javascript" src="../_javascript/funcoes.js"></script>
+    <body>
+        <div id= "interface">
+            <header id= "beginning">
+                <hgroup>
+                    <h1>Olá mundo divino!</h1>
+                    <h2>&nbsp; Crie vida ao seu espaço!</h2> 
+                </hgroup>
+                <img id="icone" src="../_imagens/home.jpg"width="200"/>
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul type="disc">
+                        <li onmouseover="mudafoto('../_imagens/home.jpg')"onmouseout="mudafoto('../_imagens/especif.jpg')"><a href="pagAna.html">Home</a></li>
+                        <li onmouseover="mudafoto('../_imagens/especif.jpg')"onmouseout="mudafoto('../_imagens/especif.jpg')"><a href="especif.html">Especificações</a></li>
+                        <li onmouseover="mudafoto('../_imagens/foto.jpg')" onmouseout="mudafoto('../_imagens/especif.jpg')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudafoto('../_imagens/multim.jpg')" onmouseout= "mudafoto('../_imagens/especif.jpg')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmouseover="mudafoto('../_imagens/contato.jpg')"onmouseout="mudafoto('../_imagens/especif.jpg')"><a href="contat.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+                <img id="logo" src="../_imagens/logo.jpg" width="100"/>
+            </header>
+            <section id="content-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h4>Definições!</h4>
+                            <h4>Rotina!</h4>
+                            <h4>Limpeza!</h4>
+                            <h4>Conservação!</h4>
+
+                            <p><h5>por Ana Tertuliano</br>Atualizado - 25/05/2020</h5></p>
+                        </hgroup>
+                    </header>
+                    <p>Click num ponto vermelho da imagem...</p>
+                    <section id="conteudo">
+                        <img src="../_imagens/anaDemarc.jpg" id="demarca" usemap="#meumapa"/>
+                        <map name="meumapa">        
+                            <area shape="circle" coords="65,39,7" href="assuntosE.html#azul" target="janela"/>
+                            <area shape="rect" coords="83,149,47,117" href="assuntosE.html#verde" target="janela"/>
+                            <area shape="poly" coords="107,97,122,86,122,114,112,114"href="assuntosE.html#inicio" target="janela"/>
+                        </map>
+                        <iframe src="../_html/assuntosE.html" name="janela" id="frame-spec"></iframe>
+                    </section>
+                </article>
+            </section>
+            <footer id="footer">
+                <br/>Copyright&copy; 2020 - by Ana Tertuliano
+                <br/><a href="https://www.cienciacrista.com" target="_blank">Ciência Cristã</a> <a href="https://www.youtube.com/user/cienciacrista1" target="_blank">YouTube</a>
+            </footer>
+        </div>
+    </body>
+</html>
