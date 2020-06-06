@@ -10,32 +10,30 @@ function populateUFs() {
             ufSelect.innerHTML +=`<option value= "${state.id}" > ${state.nome} </option>`
         }
     })
-    }
+}
 
     populateUFs()
 
-    function getCities (event) {
-        const cityselect = document.querySelector("select[name=city]")
-        //const stateInput = document.querySelector("input[name=state]")
+function getCities (event) {
+    const cityselect = document.querySelector("select[name=city]")
+    const stateInput = document.querySelector("input[name=state]")
         
-        const ufvalue = event.target.value //console.log(event.target.value)
+    const ufvalue = event.target.value //console.log(event.target.value)
         
         //const indexOfSelect
         //stateInput.value = event.target.options //options pega toda extensão - [0] do 0 ao 26 - sendo 27 etados
         
-        const url=`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufvalue}/municipios`
+    const url=`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufvalue}/municipios`
         
-        fetch(url)
-            .then(res => res.json())
-            .then(cities => {
-                for(const city of cities){
-                    cityselect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
-                }
-            cityselect.disabled = false
+    fetch(url)
+        .then(res => res.json())
+        .then(cities => {
+        for(const city of cities){
+            cityselect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+        }
+        cityselect.disabled = false
     })
-    }
-
-
+}
 document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)   
@@ -43,7 +41,7 @@ document
     
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 
-for (const item of itemsToCollect) {  
+for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)  
 }
 
