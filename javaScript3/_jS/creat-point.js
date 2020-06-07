@@ -18,15 +18,15 @@ function getCities (event) {
     const cityselect = document.querySelector("select[name=city]")
     const stateInput = document.querySelector("input[name=state]")
         
-    const ufvalue = event.target.value //console.log(event.target.value)
+    const ufvalue = event.target.value      //console.log(event.target.value)
         
-    const indexOfSelectedState = event.target.selectedIndex // incluso
-    stateInput.value = event.target.options[indexOfSelectedState].text //incluso //options pega toda extensão - [0] do 0 ao 26 - sendo 27 etados
+    const indexOfSelectedState = event.target.selectedIndex
+    stateInput.value = event.target.options[indexOfSelectedState].text  //options pega toda extensão - [0] do 0 ao 26 - sendo 27 etados
         
     const url=`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufvalue}/municipios`
 
-    citySelect.innerHTML = "<option value>Selecione a Cidade<option/>"
-    citySelect.disable = true
+   //citySelect.innerHTML = "<option value> Selecione a Cidade <option/>"    // removido por falha na cidade //
+    //citySelect.disable = true     // removido por falha na cidade
         
     fetch(url)
         .then(res => res.json())
@@ -47,6 +47,7 @@ const itemsToCollect = document.querySelectorAll(".items-grid li")
 for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)  
 }
+const collecteditems = document.querySelector("input[name=items]")
 
 let selectedItems = []
 
@@ -77,6 +78,7 @@ function handleSelectedItem(event){
     }   else {
             selectedItems.push(itemId)
         }
+collecteditems.value = selectedItems
+//teste // erro no teste o console não funcionou antes de incluir a linha 50 e 81
 }
-
-console.log(selectedItems)
+//console.log(selectedItems) // teste falho
