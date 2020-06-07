@@ -4,7 +4,7 @@ function populateUFs() {
     const url=`https://servicodados.ibge.gov.br/api/v1/localidades/estados`
 
     fetch(url)
-    .then( (res) => { return res.json() }) // ( res => res.json()) - eronfunction - resposta que retorna em resposta em json
+    .then( res => res.json() ) // ( res => res.json()) - eronfunction - resposta que retorna em resposta em json
     .then( states => { 
         for (const state of states){
             ufSelect.innerHTML +=`<option value= "${state.id}" > ${state.nome} </option>`
@@ -12,7 +12,7 @@ function populateUFs() {
     })
 }
 
-    populateUFs()
+populateUFs()
 
 function getCities (event) {
     const cityselect = document.querySelector("select[name=city]")
@@ -20,16 +20,19 @@ function getCities (event) {
         
     const ufvalue = event.target.value //console.log(event.target.value)
         
-        //const indexOfSelect
-        //stateInput.value = event.target.options //options pega toda extensão - [0] do 0 ao 26 - sendo 27 etados
+    const indexOfSelectedState = event.target.selectedIndex // incluso
+    stateInput.value = event.target.options[indexOfSelectedState].text //incluso //options pega toda extensão - [0] do 0 ao 26 - sendo 27 etados
         
     const url=`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufvalue}/municipios`
+
+    citySelect.innerHTML = "<option value>Selecione a Cidade<option/>"
+    citySelect.disable = true
         
     fetch(url)
         .then(res => res.json())
         .then(cities => {
         for(const city of cities){
-            cityselect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+            cityselect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
         cityselect.disabled = false
     })
